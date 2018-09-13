@@ -1,0 +1,105 @@
+body {
+    background-size: 100%;
+    background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ),url("https://image.ibb.co/mc3PH8/headerbg.jpg");
+    background-repeat:repeat;
+    background-attachment: fixed;
+    background-color: #121113;
+}
+
+h1, h2, h3 {
+    font-family: "News Cycle";
+    letter-spacing: 3px;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p, footer {
+    font-family: "News Cycle";
+    font-size: 17px;
+    width: 70%;
+}
+
+a {
+    color: green;
+    font-weight: bold;
+}
+
+.logo {
+    display: block;
+    padding-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+.address{
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+    overflow-x: auto;
+    margin-top: 5%;
+}
+card::-webkit-scrollbar {
+  display: none;
+}
+.card--content {
+    background-color: #939293;
+    opacity: 0.8;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    padding: 5% 55% 5% 5%;    
+    color: white;  
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+a:link {
+    text-decoration: none;
+    color: green;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+footer {
+    position: fixed;
+    padding-bottom: 1%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
