@@ -1,80 +1,143 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
 body {
-    background-size: 100%;
-    background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ),url("https://image.ibb.co/mc3PH8/headerbg.jpg");
-    background-repeat:repeat;
-    background-attachment: fixed;
-    background-color: #121113;
+	background: #4e4e4e;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    opacity: 1;
+    transition: 1s opacity;
+}
+html {
+	position: relative;
+	min-height: 100%;
+    
+}
+body {
+	margin: 0 0 50px; /* bottom = footer height */
 }
 
-h1, h2, h3 {
-    font-family: "News Cycle";
-    letter-spacing: 3px;
-    font-size: 15px;
+.container {
+    padding-left: 5%;
+    padding-right: 5%;
+    display:none;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Montserrat', sans-serif; font-weight:700;
+	letter-spacing: 2px;
+    color: #fff;
+}
+
+p {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif; font-weight:300;
+	letter-spacing: 1px;
+    color: #fff;    
+}
+header {
+	background: #4e4e4e;
+	padding: 15px 0;
+}
+header .logo {
+	max-width: 220px;
+}
+.jumbotron {
+	width: 100%;
+	min-height: 450px;
+	background: url('https://image.ibb.co/mc3PH8/headerbg.jpg') center center;
+	background-size: cover;
+	opacity: 1;
+	display: table;
+	width: 100%;
+	position: relative;
+	border-radius: 0px;
+	color: white;
+	margin: 0;
+	-webkit-clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 85%);
+    clip-path: url(#poly);
+	overflow: hidden;
+  
+}
+.jumbotron h1 {
+	font-size: 50px;
+}
+.jumbotron h2 {
+	font-size: 18px;
+	margin: 0;
+}
+
+.subtitle {
+    color: #fff;
+}
+
+#black {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	min-width: 100%;
+	height: auto;
+	min-height: 100%;
+	background: rgba(26,29,37,0.4);
+}
+#main-wrapper {
+	margin-top: 0;
+}
+.main-content {
+	padding-top: 25px;
+}
+.main-content .white-box {
+	padding: 25px;
+	margin: 25px 0;
+	background: #4e4e4e
+}
+.main-content ul {
+	list-style: initial;
+	margin-left: 15px
+}
+.main-content .final-cta {
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif; font-weight:700;
+	
+}
+
+footer {
+	color: #999;
+	position: absolute;
+	background: rgba(26,29,37,1);
+	left: 0;
+	bottom: 0;
+	height: 45px;
+	width: 100%;
+	padding: 20px 0;
+	font-size: 12px;
+    font-family: 'Open Sans', sans-serif; font-weight:300;
+	letter-spacing: 1px;
     text-align: center;
-    text-transform: uppercase;
 }
 
-p, footer {
-    font-family: "News Cycle";
-    font-size: 17px;
-    width: 70%;
+@media (min-width: 320px) and (max-width: 480px) {
+.jumbotron {
+	min-height: 460px;
+	padding: 5px 15px;
+}
+.jumbotron h1 {
+	font-size: 30px;
+}
+.jumbotron h2 {
+	font-size: 16px;
+}
 }
 
 a {
     color: green;
-    font-weight: bold;
-}
-
-.logo {
-    display: block;
-    padding-top: 2%;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-}
-
-.address{
-    text-align: center;
-}
-
-.card {
-    display: flex;
-    min-width: 100%;
-    min-height: 100%;
-    overflow-x: auto;
-    margin-top: 5%;
-}
-card::-webkit-scrollbar {
-  display: none;
-}
-.card--content {
-    background-color: #939293;
-    opacity: 0.8;
-    min-width: 100%;
-    width: auto;
-    height: auto;
-    padding: 5% 55% 5% 5%;    
-    color: white;  
-}
-
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #888; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    font-family: 'Open Sans', sans-serif; font-weight:bold;
 }
 
 a:link {
@@ -92,14 +155,4 @@ a:hover {
 
 a:active {
     text-decoration: none;
-}
-
-footer {
-    position: fixed;
-    padding-bottom: 1%;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
 }
